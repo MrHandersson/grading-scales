@@ -141,11 +141,11 @@ Corrections are welcome: open an issue or pull request with a link to an officia
 
 ## License
 
-- **Data** (`data/`, `docs/data/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DATA). Attribution: "Grading Scales Dataset by Martin Larsson, https://mrhandersson.github.io/grading-scales/".
+- **Data** (`data/`, `docs/data/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DATA). Attribution: "Grading Scales Dataset by Shane Hand, https://mrhandersson.github.io/grading-scales/".
 - **Code** (scripts, site HTML/CSS/JS, schema): [MIT](LICENSE).
 
 ## Citation
 
-> Larsson, M. (2026). *Grading Scales by Country* (Version 1.0.0) [Data set]. https://mrhandersson.github.io/grading-scales/
+> Hand, S. (2026). *Grading Scales by Country* (Version 1.0.0) [Data set]. https://mrhandersson.github.io/grading-scales/
 
 See also [`CITATION.cff`](CITATION.cff).

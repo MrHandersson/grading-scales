@@ -3,8 +3,8 @@ message: "If you use this dataset, please cite it as below."
 title: "Grading Scales by Country"
 type: dataset
 authors:
-  - family-names: Larsson
-    given-names: Martin
+  - family-names: Hand
+    given-names: Shane
 version: 1.0.0
 date-released: 2026-10-19
 url: "https://mrhandersson.github.io/grading-scales/"
