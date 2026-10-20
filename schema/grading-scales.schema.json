@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mrhandersson.github.io/grading-scales/schema/grading-scales.schema.json",
+  "title": "Grading scales by country",
+  "description": "One row per grade band in a national or institutional grading system.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["country", "system", "grade", "min_percent", "max_percent", "gpa_points", "description", "source_url", "notes"],
+    "properties": {
+      "country": { "type": "string", "minLength": 1, "description": "Country or region the scale belongs to." },
+      "system": { "type": "string", "minLength": 1, "description": "Name of the grading system within the country." },
+      "grade": { "type": "string", "minLength": 1, "description": "Grade label as written in the system." },
+      "min_percent": { "type": ["number", "null"], "minimum": 0, "maximum": 100, "description": "Lowest percentage mark in this band (inclusive). Null when the system has no fixed percentage cutoffs." },
+      "max_percent": { "type": ["number", "null"], "minimum": 0, "maximum": 100, "description": "Highest percentage mark in this band (inclusive). Null when the system has no fixed percentage cutoffs." },
+      "gpa_points": { "type": ["number", "null"], "minimum": 0, "description": "Grade points on the system's own point scale (4.0 GPA, 10-point CGPA, Swedish merit points). Null when not applicable." },
+      "description": { "type": "string", "description": "Meaning of the grade, or its native score range for non-percentage systems." },
+      "source_url": { "type": "string", "format": "uri", "pattern": "^https://", "description": "Primary public source for the row." },
+      "notes": { "type": "string", "description": "Caveats, variation between institutions, secondary sources." }
+    }
+  }
+}
