@@ -1,0 +1,13 @@
+{
+  "name": "grading-scales",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Open dataset of grading scales by country (CSV/JSON) with a static GitHub Pages site.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/converter.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

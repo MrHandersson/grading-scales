@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "Grading Scales by Country"
+type: dataset
+authors:
+  - family-names: Larsson
+    given-names: Martin
+version: 1.0.0
+date-released: 2026-10-19
+url: "https://mrhandersson.github.io/grading-scales/"
+repository-code: "https://github.com/MrHandersson/grading-scales"
+license: CC-BY-4.0
+keywords: [grading scale, GPA, letter grades, grade conversion, education]
