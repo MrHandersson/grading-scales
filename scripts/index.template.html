@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grading Scales by Country: Open Dataset (CSV &amp; JSON)</title>
+<meta name="description" content="Free, sourced dataset of grading scales by country: US letter grades and 4.0 GPA, UK degree classes and GCSE 9-1, India CGPA and CBSE, Canada, Australia, Germany, France, Netherlands, Spain, Italy, Sweden and ECTS. Download CSV or JSON.">
+<link rel="canonical" href="https://mrhandersson.github.io/grading-scales/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grading Scales Dataset">
+<meta property="og:title" content="Grading Scales by Country: Open Dataset (CSV & JSON)">
+<meta property="og:description" content="Sourced grade bands, percentage cutoffs and grade points for 12 countries and regions. CC BY 4.0, free to download.">
+<meta property="og:url" content="https://mrhandersson.github.io/grading-scales/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Grading Scales by Country: Open Dataset">
+<meta name="twitter:description" content="Sourced grade bands, percentage cutoffs and grade points for 12 countries and regions. CSV and JSON, CC BY 4.0.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+<!-- JSONLD -->
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>Grading scales by country</h1>
+    <p class="lede">An open, sourced dataset of grade bands, percentage cutoffs and grade points for <!-- COUNTRY_COUNT --> countries and regions. Every row links to the public source it came from, and where a scale varies by institution the notes say so.</p>
+    <p class="downloads">
+      <a class="btn" href="data/grading-scales.csv" download>Download CSV</a>
+      <a class="btn" href="data/grading-scales.json" download>Download JSON</a>
+      <a class="btn btn-ghost" href="schema/grading-scales.schema.json">JSON Schema</a>
+      <a class="btn btn-ghost" href="https://github.com/MrHandersson/grading-scales">GitHub</a>
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="about">
+    <p>There is no international grading scale. A 75% is a First in the UK, a Distinction in Australia, a B in Canada and a C at most US colleges. This dataset puts the common systems side by side in one consistent format so you can compare, convert and build on them. For a plain-English walkthrough of what the same score means in each system, see the <a href="https://mygradecalculator.net/grading-scales-by-country">grading scales by country guide</a>.</p>
+  </section>
+
+  <section id="converter" aria-labelledby="converter-title">
+    <h2 id="converter-title">Percent to grade converter</h2>
+    <p>Pick a percentage-based system and enter a mark. The converter reads the same JSON file you can download.</p>
+    <form id="convert-form" class="converter" autocomplete="off">
+      <label>System
+        <select id="conv-system" required><option value="">Loading…</option></select>
+      </label>
+      <label>Percent
+        <input id="conv-percent" type="number" min="0" max="100" step="0.1" inputmode="decimal" placeholder="e.g. 78" required>
+      </label>
+      <button type="submit">Convert</button>
+    </form>
+    <output id="conv-result" class="result" for="conv-system conv-percent" aria-live="polite"></output>
+    <p class="hint">Marks between two bands (for example 92.5 when one band ends at 92 and the next starts at 93) fall into the lower band, with no rounding. Systems without fixed percentage cutoffs, such as Germany or the CBSE positional grades, are not listed. To combine grade points across courses, use a credit-weighted <a href="https://mygradecalculator.net/gpa-calculator">GPA calculator</a>.</p>
+  </section>
+
+  <nav id="toc" aria-label="Countries">
+    <h2>Countries and systems</h2>
+    <!-- TOC -->
+  </nav>
+
+  <section id="scales">
+    <!-- TABLES -->
+  </section>
+
+  <section id="schema">
+    <h2>Data format</h2>
+    <p>Each row is one grade band. <code>min_percent</code> and <code>max_percent</code> are inclusive and are <code>null</code> for systems that are not percentage-based (the native range is in <code>description</code>). <code>gpa_points</code> uses the system's own point scale. Full details are in the <a href="https://github.com/MrHandersson/grading-scales#schema">README</a>.</p>
+    <pre><code>country, system, grade, min_percent, max_percent, gpa_points, description, source_url, notes</code></pre>
+    <p>License: data <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT. Please cite as “Grading Scales Dataset, mrhandersson.github.io/grading-scales”.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="credit">Built by <a href="https://mygradecalculator.net/">mygradecalculator.net</a>, free grade calculators with no sign-up. Grading scales differ between schools, so check your institution's official policy before relying on a conversion.</p>
+    <p class="small">Last updated <!-- UPDATED -->. Found an error or have a better source? <a href="https://github.com/MrHandersson/grading-scales/issues">Open an issue</a>.</p>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
