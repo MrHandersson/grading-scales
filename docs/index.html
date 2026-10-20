@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grading Scales by Country: Open Dataset (CSV &amp; JSON)</title>
+<meta name="description" content="Free, sourced dataset of grading scales by country: US letter grades and 4.0 GPA, UK degree classes and GCSE 9-1, India CGPA and CBSE, Canada, Australia, Germany, France, Netherlands, Spain, Italy, Sweden and ECTS. Download CSV or JSON.">
+<link rel="canonical" href="https://mrhandersson.github.io/grading-scales/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grading Scales Dataset">
+<meta property="og:title" content="Grading Scales by Country: Open Dataset (CSV & JSON)">
+<meta property="og:description" content="Sourced grade bands, percentage cutoffs and grade points for 12 countries and regions. CC BY 4.0, free to download.">
+<meta property="og:url" content="https://mrhandersson.github.io/grading-scales/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Grading Scales by Country: Open Dataset">
+<meta name="twitter:description" content="Sourced grade bands, percentage cutoffs and grade points for 12 countries and regions. CSV and JSON, CC BY 4.0.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Grading Scales by Country",
+  "description": "Open, sourced dataset of grading scales by country: grade bands, percentage cutoffs and grade points for the US, UK, India, Canada, Australia, Germany, France, the Netherlands, Spain, Italy, Sweden and the ECTS scale.",
+  "url": "https://mrhandersson.github.io/grading-scales/",
+  "sameAs": "https://github.com/MrHandersson/grading-scales",
+  "keywords": [
+    "grading scale",
+    "grading system",
+    "GPA",
+    "letter grades",
+    "grade conversion",
+    "education",
+    "percentage to GPA",
+    "international grades"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Person",
+    "name": "Martin Larsson",
+    "url": "https://mygradecalculator.net/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Grade Calculator",
+    "url": "https://mygradecalculator.net/"
+  },
+  "dateModified": "2026-10-19",
+  "version": "1.0.0",
+  "inLanguage": "en",
+  "variableMeasured": [
+    "grade",
+    "min_percent",
+    "max_percent",
+    "gpa_points"
+  ],
+  "spatialCoverage": [
+    "Australia",
+    "Canada",
+    "Europe (ECTS)",
+    "France",
+    "Germany",
+    "India",
+    "Italy",
+    "Netherlands",
+    "Spain",
+    "Sweden",
+    "United Kingdom",
+    "United States"
+  ],
+  "isBasedOn": [
+    "https://artsci.calendar.utoronto.ca/academic-record",
+    "https://ehea.info/media.ehea.info/file/ECTS_Guide/77/4/ects-guide_en_595774.pdf",
+    "https://miur.mur.gov.it/studiare-in-italia/studying/index.html",
+    "https://siec.education.fr/candidats/examens/BCG/resultats/resultats-12",
+    "https://sps.columbia.edu/students/student-advising/academic-policies-procedures/grades",
+    "https://www.boe.es/buscar/act.php?id=BOE-A-2003-17643",
+    "https://www.cbse.gov.in/cbsenew/correction/grading.pdf",
+    "https://www.gov.uk/government/publications/gcse-9-to-1-grade-scale-explained/gcse-9-to-1-grade-scale-explained",
+    "https://www.nuffic.nl/en/education-systems/the-netherlands/grading-systems",
+    "https://www.prospects.ac.uk/applying-for-university/university-life/understanding-university-grades-in-the-uk/",
+    "https://www.skolverket.se/prov-och-bedomning/betyg/betygsskalan",
+    "https://www.studying-in-germany.org/german-grading-system/",
+    "https://www.ugc.gov.in/pdfnews/8023719_Guidelines-for-CBCS.pdf",
+    "https://www.unsw.edu.au/student/managing-your-studies/academic-life/grades-results-academic-standing/guide"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://mrhandersson.github.io/grading-scales/data/grading-scales.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://mrhandersson.github.io/grading-scales/data/grading-scales.json"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>Grading scales by country</h1>
+    <p class="lede">An open, sourced dataset of grade bands, percentage cutoffs and grade points for 12 countries and regions. Every row links to the public source it came from, and where a scale varies by institution the notes say so.</p>
+    <p class="downloads">
+      <a class="btn" href="data/grading-scales.csv" download>Download CSV</a>
+      <a class="btn" href="data/grading-scales.json" download>Download JSON</a>
+      <a class="btn btn-ghost" href="schema/grading-scales.schema.json">JSON Schema</a>
+      <a class="btn btn-ghost" href="https://github.com/MrHandersson/grading-scales">GitHub</a>
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="about">
+    <p>There is no international grading scale. A 75% is a First in the UK, a Distinction in Australia, a B in Canada and a C at most US colleges. This dataset puts the common systems side by side in one consistent format so you can compare, convert and build on them. For a plain-English walkthrough of what the same score means in each system, see the <a href="https://mygradecalculator.net/grading-scales-by-country">grading scales by country guide</a>.</p>
+  </section>
+
+  <section id="converter" aria-labelledby="converter-title">
+    <h2 id="converter-title">Percent to grade converter</h2>
+    <p>Pick a percentage-based system and enter a mark. The converter reads the same JSON file you can download.</p>
+    <form id="convert-form" class="converter" autocomplete="off">
+      <label>System
+        <select id="conv-system" required><option value="">Loading…</option></select>
+      </label>
+      <label>Percent
+        <input id="conv-percent" type="number" min="0" max="100" step="0.1" inputmode="decimal" placeholder="e.g. 78" required>
+      </label>
+      <button type="submit">Convert</button>
+    </form>
+    <output id="conv-result" class="result" for="conv-system conv-percent" aria-live="polite"></output>
+    <p class="hint">Marks between two bands (for example 92.5 when one band ends at 92 and the next starts at 93) fall into the lower band, with no rounding. Systems without fixed percentage cutoffs, such as Germany or the CBSE positional grades, are not listed. To combine grade points across courses, use a credit-weighted <a href="https://mygradecalculator.net/gpa-calculator">GPA calculator</a>.</p>
+  </section>
+
+  <nav id="toc" aria-label="Countries">
+    <h2>Countries and systems</h2>
+    <ul>
+<li><a href="#united-states">United States</a>: <a href="#united-states-college-letter-grades-4-0-gpa-plus-minus">College letter grades (4.0 GPA, plus/minus)</a></li>
+<li><a href="#united-kingdom">United Kingdom</a>: <a href="#united-kingdom-university-undergraduate-degree-classification">University undergraduate degree classification</a>, <a href="#united-kingdom-university-taught-master-s-degree">University taught master&#x27;s degree</a>, <a href="#united-kingdom-gcse-9-1-england">GCSE 9-1 (England)</a></li>
+<li><a href="#india">India</a>: <a href="#india-university-10-point-cgpa-ugc-cbcs">University 10-point CGPA (UGC CBCS)</a>, <a href="#india-cbse-class-x-and-xii-positional-grades">CBSE Class X and XII (positional grades)</a></li>
+<li><a href="#canada">Canada</a>: <a href="#canada-university-of-toronto-example-university-scale">University of Toronto (example university scale)</a></li>
+<li><a href="#australia">Australia</a>: <a href="#australia-university-grade-bands-unsw">University grade bands (UNSW)</a></li>
+<li><a href="#germany">Germany</a>: <a href="#germany-university-grades-1-0-5-0">University grades 1.0-5.0</a>, <a href="#germany-law-degrees-0-18-points">Law degrees (0-18 points)</a></li>
+<li><a href="#france">France</a>: <a href="#france-baccalaur-at-0-20-mentions">Baccalauréat (0-20) mentions</a></li>
+<li><a href="#netherlands">Netherlands</a>: <a href="#netherlands-secondary-and-higher-education-1-10">Secondary and higher education (1-10)</a></li>
+<li><a href="#spain">Spain</a>: <a href="#spain-university-grades-0-10-real-decreto-1125-2003">University grades (0-10), Real Decreto 1125/2003</a></li>
+<li><a href="#italy">Italy</a>: <a href="#italy-university-exams-0-30">University exams (0-30)</a>, <a href="#italy-final-degree-mark-0-110">Final degree mark (0-110)</a></li>
+<li><a href="#sweden">Sweden</a>: <a href="#sweden-school-grades-a-f-grundskola-and-gymnasieskola">School grades A-F (grundskola and gymnasieskola)</a></li>
+<li><a href="#europe-ects">Europe (ECTS)</a>: <a href="#europe-ects-ects-grading-scale-a-e-relative-pre-2009">ECTS grading scale A-E (relative, pre-2009)</a></li>
+</ul>
+  </nav>
+
+  <section id="scales">
+    <article class="country" id="united-states">
+<h2>United States</h2>
+<section class="system" id="united-states-college-letter-grades-4-0-gpa-plus-minus">
+<h3>College letter grades (4.0 GPA, plus/minus)</h3>
+<p>Plus/minus grades sit 0.3 above or below the plain letter. Some schools use thirds (3.67, 3.33) or give an A+ 4.33; the <a href="https://mygradecalculator.net/gpa-scale">GPA scale guide</a> compares the conventions.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Percent</th><th scope="col">Points</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">A+</th><td>&ndash;</td><td>4</td><td>Excellent (plus)</td></tr>
+<tr><th scope="row">A</th><td>93&ndash;100%</td><td>4</td><td>Excellent</td></tr>
+<tr><th scope="row">A-</th><td>90&ndash;92%</td><td>3.7</td><td>Excellent</td></tr>
+<tr><th scope="row">B+</th><td>87&ndash;89%</td><td>3.3</td><td>Good</td></tr>
+<tr><th scope="row">B</th><td>83&ndash;86%</td><td>3</td><td>Good</td></tr>
+<tr><th scope="row">B-</th><td>80&ndash;82%</td><td>2.7</td><td>Good</td></tr>
+<tr><th scope="row">C+</th><td>77&ndash;79%</td><td>2.3</td><td>Fair</td></tr>
+<tr><th scope="row">C</th><td>73&ndash;76%</td><td>2</td><td>Fair</td></tr>
+<tr><th scope="row">C-</th><td>70&ndash;72%</td><td>1.7</td><td>Fair</td></tr>
+<tr><th scope="row">D+</th><td>67&ndash;69%</td><td>1.3</td><td>Poor but passing</td></tr>
+<tr><th scope="row">D</th><td>63&ndash;66%</td><td>1</td><td>Poor but passing</td></tr>
+<tr><th scope="row">D-</th><td>60&ndash;62%</td><td>0.7</td><td>Poor but passing; lowest passing grade on this scale</td></tr>
+<tr><th scope="row">F</th><td>0&ndash;59%</td><td>0</td><td>Failure</td></tr>
+</tbody></table></div>
+<p class="notes">No common percentage cutoff (null): many schools do not award A+, and those that do set their own cutoff (Columbia SPS uses 98-100). Most schools count A+ as 4.0; some (e.g. Columbia SPS, Arizona State) give 4.33.</p>
+<p class="notes">Common US college percentage cutoffs as compiled in the mygradecalculator.net GPA scale guide from Columbia University School of Professional Studies (A to C-) and the University of the Incarnate Word (D+ to D-, https://my.uiw.edu/registrar/academics/grading-scale.html); standard grade points per George Washington University (https://advising.columbian.gwu.edu/gpa-calculator). Cutoffs, plus/minus use and A+/A- point values vary by institution (e.g. some use 3.67/3.33 thirds).</p>
+<p class="source">Source: <a href="https://sps.columbia.edu/students/student-advising/academic-policies-procedures/grades">sps.columbia.edu</a></p>
+</section>
+</article>
+<article class="country" id="united-kingdom">
+<h2>United Kingdom</h2>
+<section class="system" id="united-kingdom-university-undergraduate-degree-classification">
+<h3>University undergraduate degree classification</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Percent</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">First-class honours (1st)</th><td>70&ndash;100%</td><td>70 and above</td></tr>
+<tr><th scope="row">Upper second-class honours (2:1)</th><td>60&ndash;69%</td><td>60 to 69</td></tr>
+<tr><th scope="row">Lower second-class honours (2:2)</th><td>50&ndash;59%</td><td>50 to 59</td></tr>
+<tr><th scope="row">Third-class honours (3rd)</th><td>40&ndash;49%</td><td>40 to 49; lowest pass</td></tr>
+<tr><th scope="row">Fail</th><td>0&ndash;39%</td><td>Below 40</td></tr>
+</tbody></table></div>
+<p class="notes">Marks out of 100. Bands as described by Prospects; individual universities may apply their own rules (e.g. borderline and classification algorithms).</p>
+<p class="source">Source: <a href="https://www.prospects.ac.uk/applying-for-university/university-life/understanding-university-grades-in-the-uk/">prospects.ac.uk</a></p>
+</section>
+<section class="system" id="united-kingdom-university-taught-master-s-degree">
+<h3>University taught master&#x27;s degree</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Percent</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">Distinction</th><td>70&ndash;100%</td><td>70 and above</td></tr>
+<tr><th scope="row">Merit</th><td>60&ndash;69%</td><td>60 to 69</td></tr>
+<tr><th scope="row">Pass</th><td>50&ndash;59%</td><td>50 to 59</td></tr>
+<tr><th scope="row">Borderline pass/fail</th><td>40&ndash;49%</td><td>40 to 49</td></tr>
+</tbody></table></div>
+<p class="notes">Level 7 taught Masters classifications as described by Prospects. Exact scales differ between institutions (e.g. some grant a pass at 49% or a Distinction at 75%). No separate fail band is listed by the source.</p>
+<p class="source">Source: <a href="https://www.prospects.ac.uk/applying-for-university/university-life/understanding-university-grades-in-the-uk/">prospects.ac.uk</a></p>
+</section>
+<section class="system" id="united-kingdom-gcse-9-1-england">
+<h3>GCSE 9-1 (England)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">9</th><td>Highest grade; awarded to fewer students than the old A*</td></tr>
+<tr><th scope="row">8</th><td>Grades 7-9 together cover the old A and A* range</td></tr>
+<tr><th scope="row">7</th><td>Bottom of grade 7 is comparable to the bottom of the old grade A</td></tr>
+<tr><th scope="row">6</th><td>No direct letter-grade equivalent</td></tr>
+<tr><th scope="row">5</th><td>&#x27;Strong pass&#x27; in DfE school performance measures</td></tr>
+<tr><th scope="row">4</th><td>&#x27;Standard pass&#x27;; bottom of grade 4 is comparable to the bottom of the old grade C</td></tr>
+<tr><th scope="row">3</th><td>Below the standard pass; DfE requires support in English/maths for grade 3 or below if continuing in education</td></tr>
+<tr><th scope="row">2</th><td>Below the standard pass</td></tr>
+<tr><th scope="row">1</th><td>Lowest grade; bottom of grade 1 is comparable to the bottom of the old grade G</td></tr>
+<tr><th scope="row">U</th><td>Ungraded</td></tr>
+</tbody></table></div>
+<p class="notes">England only (Wales and Northern Ireland mostly use A*-G). There are no fixed percentage cutoffs: grade boundaries are set each year for each paper, so min/max_percent are null.</p>
+<p class="source">Source: <a href="https://www.gov.uk/government/publications/gcse-9-to-1-grade-scale-explained/gcse-9-to-1-grade-scale-explained">gov.uk</a></p>
+</section>
+</article>
+<article class="country" id="india">
+<h2>India</h2>
+<section class="system" id="india-university-10-point-cgpa-ugc-cbcs">
+<h3>University 10-point CGPA (UGC CBCS)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Percent</th><th scope="col">Points</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">O</th><td>90&ndash;100%</td><td>10</td><td>Outstanding</td></tr>
+<tr><th scope="row">A+</th><td>80&ndash;89%</td><td>9</td><td>Excellent</td></tr>
+<tr><th scope="row">A</th><td>70&ndash;79%</td><td>8</td><td>Very good</td></tr>
+<tr><th scope="row">B+</th><td>60&ndash;69%</td><td>7</td><td>Good</td></tr>
+<tr><th scope="row">B</th><td>55&ndash;59%</td><td>6</td><td>Above average</td></tr>
+<tr><th scope="row">C</th><td>50&ndash;54%</td><td>5</td><td>Average</td></tr>
+<tr><th scope="row">P</th><td>40&ndash;49%</td><td>4</td><td>Pass</td></tr>
+<tr><th scope="row">F</th><td>0&ndash;39%</td><td>0</td><td>Fail</td></tr>
+</tbody></table></div>
+<p class="notes">Letter grades and grade points per UGC Choice Based Credit System guidelines. Percentage cutoffs are the commonly used ones described by Leverage Edu (https://leverageedu.com/blog/grading-system-in-india/); exact cutoffs vary by university. CGPA is the credit-weighted average of grade points.</p>
+<p class="source">Source: <a href="https://www.ugc.gov.in/pdfnews/8023719_Guidelines-for-CBCS.pdf">ugc.gov.in</a></p>
+</section>
+<section class="system" id="india-cbse-class-x-and-xii-positional-grades">
+<h3>CBSE Class X and XII (positional grades)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">A1</th><td>Top 1/8th of passed candidates</td></tr>
+<tr><th scope="row">A2</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">B1</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">B2</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">C1</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">C2</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">D1</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">D2</th><td>Next 1/8th of passed candidates</td></tr>
+<tr><th scope="row">E</th><td>Failed candidates</td></tr>
+</tbody></table></div>
+<p class="notes">Relative (positional) grading: passed candidates are ranked and split into eighths, so there are no fixed percentage cutoffs (min/max_percent null). Applies to subjects with more than 500 passed candidates; ties and minor proportion adjustments per CBSE notes. CBSE also reports marks/percentages separately.</p>
+<p class="source">Source: <a href="https://www.cbse.gov.in/cbsenew/correction/grading.pdf">cbse.gov.in</a></p>
+</section>
+</article>
+<article class="country" id="canada">
+<h2>Canada</h2>
+<section class="system" id="canada-university-of-toronto-example-university-scale">
+<h3>University of Toronto (example university scale)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Percent</th><th scope="col">Points</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">A+</th><td>90&ndash;100%</td><td>4</td><td>Excellent</td></tr>
+<tr><th scope="row">A</th><td>85&ndash;89%</td><td>4</td><td>Excellent</td></tr>
+<tr><th scope="row">A-</th><td>80&ndash;84%</td><td>3.7</td><td>Excellent</td></tr>
+<tr><th scope="row">B+</th><td>77&ndash;79%</td><td>3.3</td><td>Good</td></tr>
+<tr><th scope="row">B</th><td>73&ndash;76%</td><td>3</td><td>Good</td></tr>
+<tr><th scope="row">B-</th><td>70&ndash;72%</td><td>2.7</td><td>Good</td></tr>
+<tr><th scope="row">C+</th><td>67&ndash;69%</td><td>2.3</td><td>Adequate</td></tr>
+<tr><th scope="row">C</th><td>63&ndash;66%</td><td>2</td><td>Adequate</td></tr>
+<tr><th scope="row">C-</th><td>60&ndash;62%</td><td>1.7</td><td>Adequate</td></tr>
+<tr><th scope="row">D+</th><td>57&ndash;59%</td><td>1.3</td><td>Marginal</td></tr>
+<tr><th scope="row">D</th><td>53&ndash;56%</td><td>1</td><td>Marginal</td></tr>
+<tr><th scope="row">D-</th><td>50&ndash;52%</td><td>0.7</td><td>Marginal; at least 50% needed for standing in a course</td></tr>
+<tr><th scope="row">F</th><td>0&ndash;49%</td><td>0</td><td>Inadequate (fail)</td></tr>
+</tbody></table></div>
+<p class="notes">Canada has no national scale; universities set their own. University of Toronto scale shown as a common pattern (see also https://www.registrar.utoronto.ca/records-academics/transcripts/grading-scales-notations/). Other Canadian universities, including many in Quebec, use different cutoffs.</p>
+<p class="source">Source: <a href="https://artsci.calendar.utoronto.ca/academic-record">artsci.calendar.utoronto.ca</a></p>
+</section>
+</article>
+<article class="country" id="australia">
+<h2>Australia</h2>
+<section class="system" id="australia-university-grade-bands-unsw">
+<h3>University grade bands (UNSW)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Percent</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">High Distinction (HD)</th><td>85&ndash;100%</td><td>85 to 100</td></tr>
+<tr><th scope="row">Distinction (DN)</th><td>75&ndash;84%</td><td>75 to 84</td></tr>
+<tr><th scope="row">Credit (CR)</th><td>65&ndash;74%</td><td>65 to 74</td></tr>
+<tr><th scope="row">Pass (PS)</th><td>50&ndash;64%</td><td>50 to 64</td></tr>
+<tr><th scope="row">Fail (FL)</th><td>0&ndash;49%</td><td>Below 50</td></tr>
+</tbody></table></div>
+<p class="notes">UNSW bands shown as the standard pattern. Thresholds vary by university; some set High Distinction at 80 rather than 85. Many transcripts also report a WAM (weighted average mark).</p>
+<p class="source">Source: <a href="https://www.unsw.edu.au/student/managing-your-studies/academic-life/grades-results-academic-standing/guide">unsw.edu.au</a></p>
+</section>
+</article>
+<article class="country" id="germany">
+<h2>Germany</h2>
+<section class="system" id="germany-university-grades-1-0-5-0">
+<h3>University grades 1.0-5.0</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">sehr gut (1.0-1.5)</th><td>Very good</td></tr>
+<tr><th scope="row">gut (1.6-2.5)</th><td>Good</td></tr>
+<tr><th scope="row">befriedigend (2.6-3.5)</th><td>Fair</td></tr>
+<tr><th scope="row">ausreichend (3.6-4.0)</th><td>Sufficient; lowest pass</td></tr>
+<tr><th scope="row">nicht ausreichend (5.0)</th><td>Not sufficient; fail</td></tr>
+</tbody></table></div>
+<p class="notes">Not percentage-based (min/max_percent null). Lower is better: 1.0 is best, 4.0 is the lowest pass. Many universities award grades in steps of 0.3 (1.0, 1.3, 1.7, 2.0, ...).</p>
+<p class="source">Source: <a href="https://www.studying-in-germany.org/german-grading-system/">studying-in-germany.org</a></p>
+</section>
+<section class="system" id="germany-law-degrees-0-18-points">
+<h3>Law degrees (0-18 points)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">sehr gut (16-18 points)</th><td>Very good; particularly outstanding</td></tr>
+<tr><th scope="row">gut (13-15 points)</th><td>Good; well above average</td></tr>
+<tr><th scope="row">vollbefriedigend (10-12 points)</th><td>Fully satisfactory; above average</td></tr>
+<tr><th scope="row">befriedigend (7-9 points)</th><td>Satisfactory; meets requirements</td></tr>
+<tr><th scope="row">ausreichend (4-6 points)</th><td>Sufficient; meets requirements with some shortcomings</td></tr>
+<tr><th scope="row">mangelhaft (1-3 points)</th><td>Deficient; fail</td></tr>
+<tr><th scope="row">ungenügend (0 points)</th><td>Inadequate; fail</td></tr>
+</tbody></table></div>
+<p class="notes">Separate points scale used in German law programmes (Staatsexamen). Not percentage-based.</p>
+<p class="source">Source: <a href="https://www.studying-in-germany.org/german-grading-system/">studying-in-germany.org</a></p>
+</section>
+</article>
+<article class="country" id="france">
+<h2>France</h2>
+<section class="system" id="france-baccalaur-at-0-20-mentions">
+<h3>Baccalauréat (0-20) mentions</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">Très bien avec les félicitations du jury</th><td>Average of 18/20 or above</td></tr>
+<tr><th scope="row">Très bien</th><td>Average of 16 to below 18/20</td></tr>
+<tr><th scope="row">Bien</th><td>Average of 14 to below 16/20</td></tr>
+<tr><th scope="row">Assez bien</th><td>Average of 12 to below 14/20</td></tr>
+<tr><th scope="row">Admis (no mention)</th><td>Average of 10 to below 12/20; pass</td></tr>
+<tr><th scope="row">Second group (rattrapage)</th><td>Average of 8 to below 10/20; candidate sits oral second-group exams</td></tr>
+<tr><th scope="row">Ajourné</th><td>Average below 8/20; fail</td></tr>
+</tbody></table></div>
+<p class="notes">Scale is 0-20 and not percentage-based (min/max_percent null). Mentions are based on the overall average after the first group of exams. French universities also grade out of 20, usually with 10 as the pass mark, but rules vary by institution.</p>
+<p class="source">Source: <a href="https://siec.education.fr/candidats/examens/BCG/resultats/resultats-12">siec.education.fr</a></p>
+</section>
+</article>
+<article class="country" id="netherlands">
+<h2>Netherlands</h2>
+<section class="system" id="netherlands-secondary-and-higher-education-1-10">
+<h3>Secondary and higher education (1-10)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">10</th><td>Excellent</td></tr>
+<tr><th scope="row">9</th><td>Very good</td></tr>
+<tr><th scope="row">8</th><td>Good</td></tr>
+<tr><th scope="row">7</th><td>Very satisfactory</td></tr>
+<tr><th scope="row">6</th><td>Satisfactory; minimum pass</td></tr>
+<tr><th scope="row">5</th><td>Almost satisfactory (fail)</td></tr>
+<tr><th scope="row">4</th><td>Unsatisfactory</td></tr>
+<tr><th scope="row">3</th><td>Very unsatisfactory</td></tr>
+<tr><th scope="row">2</th><td>Poor</td></tr>
+<tr><th scope="row">1</th><td>Very poor</td></tr>
+</tbody></table></div>
+<p class="notes">Scale 1-10, used in secondary and higher education; not percentage-based (min/max_percent null). 6 is the minimum pass; in secondary education 5.5 is rounded to 6, and in higher education 5.5 is sometimes sufficient. Grades 1-3 are almost never issued and 9-10 are rare. How raw scores map to grades is set per test/programme.</p>
+<p class="source">Source: <a href="https://www.nuffic.nl/en/education-systems/the-netherlands/grading-systems">nuffic.nl</a></p>
+</section>
+</article>
+<article class="country" id="spain">
+<h2>Spain</h2>
+<section class="system" id="spain-university-grades-0-10-real-decreto-1125-2003">
+<h3>University grades (0-10), Real Decreto 1125/2003</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">Matrícula de Honor (MH)</th><td>Distinction that may be awarded to students with 9.0 or above</td></tr>
+<tr><th scope="row">Sobresaliente (SB)</th><td>9.0 to 10</td></tr>
+<tr><th scope="row">Notable (NT)</th><td>7.0 to 8.9</td></tr>
+<tr><th scope="row">Aprobado (AP)</th><td>5.0 to 6.9; pass</td></tr>
+<tr><th scope="row">Suspenso (SS)</th><td>0 to 4.9; fail</td></tr>
+</tbody></table></div>
+<p class="notes">May not exceed 5% of students enrolled in a subject in the academic year (or one award if fewer than 20 students).</p>
+<p class="notes">Official national scale for university degrees, expressed to one decimal; not percentage-based (min/max_percent null).</p>
+<p class="source">Source: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2003-17643">boe.es</a></p>
+</section>
+</article>
+<article class="country" id="italy">
+<h2>Italy</h2>
+<section class="system" id="italy-university-exams-0-30">
+<h3>University exams (0-30)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">30 e lode</th><td>30/30 with honours (cum laude)</td></tr>
+<tr><th scope="row">18-30</th><td>Pass; 18/30 is the minimum passing mark and 30/30 the maximum</td></tr>
+<tr><th scope="row">Below 18</th><td>Fail; not recorded</td></tr>
+</tbody></table></div>
+<p class="notes">National scale described by the Italian Ministry of University and Research (MUR); also see Politecnico di Torino (https://www.polito.it/en/education/applying-studying-graduating/studying-abroad/the-ects-system/the-grading-system). Not percentage-based. Failed exams are not recorded on the transcript.</p>
+<p class="source">Source: <a href="https://miur.mur.gov.it/studiare-in-italia/studying/index.html">miur.mur.gov.it</a></p>
+</section>
+<section class="system" id="italy-final-degree-mark-0-110">
+<h3>Final degree mark (0-110)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">110 e lode</th><td>110/110 with honours, if decided unanimously by the examination board</td></tr>
+<tr><th scope="row">66-110</th><td>Degree awarded; 66/110 is the minimum mark</td></tr>
+</tbody></table></div>
+<p class="notes">Final degree mark accounts for the exam average and the thesis/final examination. Not percentage-based.</p>
+<p class="source">Source: <a href="https://miur.mur.gov.it/studiare-in-italia/studying/index.html">miur.mur.gov.it</a></p>
+</section>
+</article>
+<article class="country" id="sweden">
+<h2>Sweden</h2>
+<section class="system" id="sweden-school-grades-a-f-grundskola-and-gymnasieskola">
+<h3>School grades A-F (grundskola and gymnasieskola)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Points</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">A</th><td>20</td><td>Excellent knowledge (utmärkta)</td></tr>
+<tr><th scope="row">B</th><td>17.5</td><td>Between A and C</td></tr>
+<tr><th scope="row">C</th><td>15</td><td>Good knowledge (goda)</td></tr>
+<tr><th scope="row">D</th><td>12.5</td><td>Between C and E</td></tr>
+<tr><th scope="row">E</th><td>10</td><td>Acceptable knowledge (godtagbara); lowest pass</td></tr>
+<tr><th scope="row">F</th><td>0</td><td>Fail (underkänt)</td></tr>
+</tbody></table></div>
+<p class="notes">Swedish A-F scale used in compulsory school and upper secondary school (gymnasieskolan); not percentage-based (min/max_percent null). gpa_points are the Skolverket merit-value points (A 20 ... F 0) from https://utbildningsguiden.skolverket.se/gymnasieskolan/gymnasievalet/rakna-ut-ditt-meritvarde, not a GPA. Swedish universities set their own scales (many use U/G/VG, others A-F).</p>
+<p class="source">Source: <a href="https://www.skolverket.se/prov-och-bedomning/betyg/betygsskalan">skolverket.se</a></p>
+</section>
+</article>
+<article class="country" id="europe-ects">
+<h2>Europe (ECTS)</h2>
+<section class="system" id="europe-ects-ects-grading-scale-a-e-relative-pre-2009">
+<h3>ECTS grading scale A-E (relative, pre-2009)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">A</th><td>Top 10% of passing students</td></tr>
+<tr><th scope="row">B</th><td>Next 25% of passing students</td></tr>
+<tr><th scope="row">C</th><td>Next 30% of passing students</td></tr>
+<tr><th scope="row">D</th><td>Next 25% of passing students</td></tr>
+<tr><th scope="row">E</th><td>Lowest 10% of passing students</td></tr>
+</tbody></table></div>
+<p class="notes">Historical relative ECTS grading scale based on the statistical distribution of passing grades in a reference group, so there are no percentage-of-marks cutoffs (min/max_percent null). The 2009 ECTS Users&#x27; Guide replaced it with the ECTS grading table, which reports the actual percentage of students receiving each local grade.</p>
+<p class="source">Source: <a href="https://ehea.info/media.ehea.info/file/ECTS_Guide/77/4/ects-guide_en_595774.pdf">ehea.info</a></p>
+</section>
+</article>
+  </section>
+
+  <section id="schema">
+    <h2>Data format</h2>
+    <p>Each row is one grade band. <code>min_percent</code> and <code>max_percent</code> are inclusive and are <code>null</code> for systems that are not percentage-based (the native range is in <code>description</code>). <code>gpa_points</code> uses the system's own point scale. Full details are in the <a href="https://github.com/MrHandersson/grading-scales#schema">README</a>.</p>
+    <pre><code>country, system, grade, min_percent, max_percent, gpa_points, description, source_url, notes</code></pre>
+    <p>License: data <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT. Please cite as “Grading Scales Dataset, mrhandersson.github.io/grading-scales”.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="credit">Built by <a href="https://mygradecalculator.net/">mygradecalculator.net</a>, free grade calculators with no sign-up. Grading scales differ between schools, so check your institution's official policy before relying on a conversion.</p>
+    <p class="small">Last updated 2026-10-19. Found an error or have a better source? <a href="https://github.com/MrHandersson/grading-scales/issues">Open an issue</a>.</p>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
