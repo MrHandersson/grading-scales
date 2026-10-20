@@ -120,7 +120,7 @@ def jsonld(rows, n_countries):
                      "education", "percentage to GPA", "international grades"],
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "isAccessibleForFree": True,
-        "creator": {"@type": "Person", "name": "Martin Larsson", "url": "https://mygradecalculator.net/"},
+        "creator": {"@type": "Person", "name": "Shane Hand", "url": "https://mygradecalculator.net/"},
         "publisher": {"@type": "Organization", "name": "My Grade Calculator", "url": "https://mygradecalculator.net/"},
         "dateModified": UPDATED,
         "version": "1.0.0",
